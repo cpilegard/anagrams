@@ -1,0 +1,9 @@
+<div class="container">
+  <% if @input %>
+  <p>Input: <%= @input %> -- Anagrams: <%= @anagrams.map{|w| w.downcase}.uniq.join(', ') %></p>
+  <% end %>
+  <p><form name="input" action="/" method="post">
+    Word: <input type="text" name="user_input">
+  </form></p>
+  <p>Press enter to search for anagrams.</p>
+</div>
